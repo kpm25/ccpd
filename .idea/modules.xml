@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ccpd.iml" filepath="$PROJECT_DIR$/ccpd.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-heroku-demo.iml" filepath="$PROJECT_DIR$/spring-boot-heroku-demo.iml" />
     </modules>
   </component>
