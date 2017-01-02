@@ -65,3 +65,10 @@ body{
 .page-wrap {
   background: orange;
 }
+
+.container {
+    text-align: center;
+    border: 3px solid green;
+     background-color: Silver;
+}
+	

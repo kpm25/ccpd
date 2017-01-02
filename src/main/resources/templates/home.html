@@ -5,83 +5,9 @@
 
 
 <head>
-<style>
-	body{
-	  background-color: 'red';
-	  font-family: Arial;
-	}
 
-  a{
-    color: #2c89ba;
-    text-decoration: none;
-  }
 
-  a:hover{
-    color: #174963;
-    text-decoration: underline;
-  }
-
-  ul{
-    padding: 0;
-  }
-
-    li{
-      border-bottom: 1px solid #eaeaea;
-      list-style: none;
-      margin-bottom: 10px;
-      padding-bottom: 10px;
-    }
-    li:last-child{
-      border: 0;
-      margin: 0;
-      padding: 0;
-    }
-
-  .page{
-    background-color: #00f;
-    border-radius: 5px;
-    margin: 40px auto;
-    padding: 20px 40px 40px 40px;
-    width: 600px;
-  }
-
-    input{
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      padding: 10px;
-    }
-
-    button{
-      background-color: #2c89ba;
-      border: none;
-      border-radius: 5px;
-      color: #fff;
-      padding: 10px;
-    }
-
-  #flash-message{
-          background-color: #2c89ba;
-          border-radius: 5px;
-          color: #fff;
-          display: block;
-          font-size: 14px;
-          padding: 10px 20px;
-        }
-
-	.page-wrap {
-	  background: orange;
-	}
-	
-	.container {
-    text-align: center;
-    border: 3px solid green;
-     background-color: Silver;
-}
-	
-
-</style>
-
- <link rel="stylesheet" type="text/css" href="main.css"/>
+<!--  <link rel="stylesheet" type="text/css" th:href="@{main.css}"/>  -->
 <link rel="stylesheet" type="text/css" th:href="@{/assets/css/main.css}" />
 
 
@@ -138,7 +64,7 @@
 <br/>
     <br/>
 
-    <div class="row " style="width:600px; margin:0 auto;">
+    <div class="row " style="width:700px; margin:0 auto;">
         <div class="col-md-12 col-lg-6">
             <form th:object="${insertRecord}" method="POST">
                 <div class="form-group">
@@ -187,45 +113,12 @@
 
 <!-- Latest compiled and minified JavaScript -->
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
-<div th:fragment="scripts">
+<!-- <div th:fragment="scripts">  -->
  
   <!--    <script type="text/javascript" th:src="@{/assets/js/app.js}"></script>  -->
-  <script type="text/javascript">
-		  
-		  const heading = document.getElementById("heading1");
-
-					const data = document.getElementById("data");
-
-					const button = document.getElementsByTagName('button')
-				//	document.body.style.background = 'red';
-					heading.style.color = 'blue';
-		
-			  		heading.innerHTML = "My First Page"; 
-			
-			button[1].addEventListener('click', ()=> {
-			
-			             <!-- '#'+(Math.random()*0xFFFFFF<<0).toString(16);	-->
-						heading.style.color = '#' + Math.floor(Math.random() * 16777215).toString(16);
-						document.body.style.background = '#' + Math.floor(Math.random() * 16777215).toString(16);
-			
-			});
-			
-			window.onload = function() {
-					document.getElementById('heading2').onclick = function() {
-					this.style.color = 'blue';
-					
-					
-					
-
-				
-            }
-        }
-		
-		
-		function bgChange(bg) {
-			document.body.style.background = bg;
-		}
-  </script>
-</div>
+  <script type="text/javascript" th:src="@{/assets/js/app2.js}"></script>
+  
+ 
+<!-- </div>  -->
 </body>
 </html>
