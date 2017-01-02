@@ -1,5 +1,7 @@
 console.log('hello from app.js');
 
+const tableDiv = document.querySelector('.list');
+
 const heading = document.getElementById("heading1");
 
 const data = document.getElementById("data");
@@ -34,3 +36,13 @@ function bgChange(bg) {
 document.body.style.background = bg;
 }
 
+tableDiv.addEventListener('mouseover', (event) => {
+	  if (event.target.tagName == 'TD') {
+	    event.target.textContent = event.target.textContent.toUpperCase();
+	  }
+	});
+tableDiv.addEventListener('mouseout', (event) => {
+	  if (event.target.tagName == 'TD') {
+	    event.target.textContent = event.target.textContent.toLowerCase();
+	  }
+	})
