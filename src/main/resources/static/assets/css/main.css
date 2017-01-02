@@ -1,8 +1,9 @@
 
 
-body{
-  background-color: 'red';
-  font-family: Arial;
+.body1{
+  background-color: 'Cyan';
+   border: 3px solid blue;
+     
 }
 
   a{
