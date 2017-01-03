@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+#myTypingText {
+	background-color:#000;
+	width:700px;
+	height:400px;
+	padding:12px;
+	color:#F00;
+	font-family:Arial, Helvetica, sans-serif;
+        font-size:30px;
+	line-height:1.5em;
+}
+</style>
+</head>
+<body>
+<div id="myTypingText"></div>
+<a th:href="@{/}">home</a>
+<script>
+var myString = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis, nisl id feugiat venenatis, massa nunc dignissim arcu, ut dictum arcu magna ac urna. Aliquam eget enim ac diam tincidunt tristique. In blandit ultricies tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada.";
+var myArray = myString.split("");
+var loopTimer;
+function frameLooper() {
+	if(myArray.length > 0) {
+		document.getElementById("myTypingText").innerHTML += myArray.shift();
+	} else {
+		clearTimeout(loopTimer); 
+                return false;
+	}
+	loopTimer = setTimeout('frameLooper()',70);
+}
+frameLooper();
+</script>
+</body>
+</html>
