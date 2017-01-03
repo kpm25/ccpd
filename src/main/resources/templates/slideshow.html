@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" th:href="@{/assets/css/main.css}" />
+
 <style>
 #wss{
 	opacity:0;
@@ -11,12 +13,14 @@
 <script>
 var wss_i = 0;
 var wss_array = [
-                 "<button >Cute</button>",
-                 "Happy",
-                 "<u>Playful</u>",
-                 "Smart",
-                 "Loyal"
+                  '<img class="feat-img" th:src="@{/assets/images/korea_1.jpg}" alt="Korea pic1" style="width:304px;height:228px;"/>',
+                  '<img class="feat-img" th:src="@{/assets/images/korea_2.jpg}" alt="Korea pic2" style="width:304px;height:228px;"/>',
+                 '<img class="feat-img" th:src="@{/assets/images/korea_3.jpg}" alt="Korea pic3" style="width:304px;height:228px;"/>',
+                  '<img class="feat-img" th:src="@{/assets/images/korea_4.jpg}" alt="Korea pic4" style="width:304px;height:228px;"/>',
+                 '<img class="feat-img" th:src="@{/assets/images/korea_5.jpg}" alt="Korea pic5" style="width:304px;height:228px;"/>'
                  ];
+                 
+                 // <!--    <script type="text/javascript" th:src="@{/assets/js/app.js}"></script>  -->
 var wss_elem;
 function wssNext(){
 	wss_i++;
@@ -34,7 +38,9 @@ function wssSlide(){
 </script>
 </head>
 <body>
-<h1>My dog is <span id="wss"></span></h1>
+ 
+
+<h1>This is Korea:<br/> <span id="wss"></span></h1>
 <a th:href="@{/}">home</a>
 <script>wss_elem = document.getElementById("wss"); wssSlide(); </script>
 </body>
