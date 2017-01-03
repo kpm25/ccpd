@@ -41,7 +41,7 @@ public class ChineseController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public String home(ModelMap model) {
+    public String chinese(ModelMap model) {
         List<Chinese> records = repository.findAll();
         model.addAttribute("chineses", records);
         model.addAttribute("insertChinese", new Chinese());
@@ -55,6 +55,6 @@ public class ChineseController {
         if (!result.hasErrors()) {
             repository.save(chinese);
         }
-        return home(model);
+        return chinese(model);
     }
 }
