@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+
+<meta name="keywords" content="Kieran Moore heroku ccpd edocode8698"/>
+<meta name="description" content="heroku java spring test"/>
+
+<!--  <link rel="stylesheet" type="text/css" th:href="@{main.css}"/>  -->
+<link rel="stylesheet" type="text/css" th:href="@{/assets/css/main.css}" />
+
+
+    <title>Kieran Moore's First Heroku Deploy Example...</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />  
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" /> 
+</head>
+<body >
+<div class="body1" >
+ <br/><br/>
+<div class="container">
+
+<div >
+
+    <br/><br/>
+    <h1 id="heading1">....Kieran's First Database....
+        Just a Demo to get up and running..... </h1 ><h2 id="heading2">These are some some example functions to start with..==> lists
+    Please make a suggestion below to help develop the site, cheers.....</h2>
+    <br/><br/>
+
+		
+	
+
+
+<br/>
+    <br/>
+
+    <div class="row " style="width:700px; margin:0 auto;">
+        <div class="col-md-12 col-lg-6">
+            <form th:object="${insertChinese}" method="POST">
+                <div class="form-group">
+                    <label for="data">Write some Chinese:</label>
+                    <input id="data" type="text" class="form-control" placeholder="TYPE HERE.." th:field="*{Chinese}" />
+                </div>
+                <button type="submit" class="btn btn-default">Post Chinese To Wall:</button>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <br/>
+ <button  type="submit" >Change Color:</button>
+
+<br/>
+    <br/>
+
+
+
+
+    <div class="row list">
+        <div class="col-sm-12">
+        
+         
+               
+                    <h1 style="text-align: center;">Chinese List:</h1>
+               
+            <table class="table table-striped">
+              
+               
+                <tbody>
+                <tr th:each="chinese : ${chineses}">
+                    <td th:text="${chinese.chinese}">Some text</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+</div>
+
+		<a th:href="@{/slideshow}">link test1</a> <br/> 
+		<a th:href="@{/test}">link test2</a>  <br/>
+		<a th:href="@{/text}">link test3</a>
+       <a th:href="@{/}">home</a>
+
+<!-- Latest compiled and minified JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
+<!-- <div th:fragment="scripts">  -->
+ 
+  <!--    <script type="text/javascript" th:src="@{/assets/js/app.js}"></script>  -->
+  <script type="text/javascript" th:src="@{/assets/js/app2.js}"></script>
+  
+ 
+<!-- </div>  -->
+
+</div>
+ <br/><br/>
+ </div>
+</body>
+</html>
