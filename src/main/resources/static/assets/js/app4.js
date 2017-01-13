@@ -2,10 +2,25 @@ function _(id){
    return document.getElementById(id);	
 }
 var droppedIn = false;
+
+
 function drag_start(event) {
     _('app_status').innerHTML = "Dragging the "+event.target.getAttribute('id');
   //  event.dataTransfer.dropEffect = "move";
     event.dataTransfer.setData("text", event.target.getAttribute('id') );
+    
+  //  _(event.target.getAttribute('id')).style.backgroundColor = "orange";
+     
+     
+   
+   
+  //   var s = '<h1>text</h1>'; // HTML string
+
+  //  var div = document.createElement('div');
+   // div.innerHTML = s;
+ //    var elements = div.childNodes;
+     
+    // event.dataTransfer.setDragImage(img, 0, 0);
 }
 function drag_enter(event) {
     _('app_status').innerHTML = "You are dragging over the "+event.target.getAttribute('id');
@@ -15,19 +30,79 @@ function drag_leave(event) {
 }
 function drag_drop(event) {
     event.preventDefault(); /* Prevent undesirable default behavior while dropping */
+   
+ //try to get a div to stay in place...another goes to dropbox:
     var elem_id = event.dataTransfer.getData("text");
+  /*
+    var clone = elem_id.cloneNode(true); // "deep" clone
+     var i = 0;
+     clone.id = _("text").id + ++i;
+     //clone.id = ""; if the divs don't need an ID
+    elem_id.parentNode.appendChild(clone);
+   */
+     
+     
+ 
+     
+  
+ 
+
+  // add the newly created element and its content into the DOM 
+ 
+   
+     
+   //  _(elem_id+"-tag").setAttribute('class', 'visible');
+     
+    //    object1-tag.setAttribute('class', 'visible');
+    
     event.target.appendChild( _(elem_id) );
     _('app_status').innerHTML = "Dropped "+elem_id+" into the "+event.target.getAttribute('id');
     _(elem_id).removeAttribute("draggable");
      _(elem_id).style.backgroundColor='blue';
     _(elem_id).style.cursor = "default";
+    
+        
+
+    
+    
     droppedIn = true;
+    
+    
+    
+    
+    
 }
 function drag_end(event) {
     if(droppedIn == false){
         _('app_status').innerHTML = "You let the "+event.target.getAttribute('id')+" go.";
     }
-//	droppedIn = false;
+    
+    if(droppedIn == true)
+    {
+	               //add ghost element
+	     var app = document.getElementById('objects');
+	     var div2 = document.createElement('div');
+	       div2.setAttribute("class","objects-set");
+	       div2.innerHTML =  _(event.target.getAttribute('id')).innerHTML;
+	    //   app.appendChild(div2);
+	     
+	    
+	     
+	      
+	  //    var element = document.getElementById(event.target.getAttribute('id'));
+	    //   var i = Array.prototype.indexOf.call(app.childNodes, element);
+	    
+	     //     app.insertBefore(div2, app.childNodes[i]);
+	    
+	         app.insertBefore(div2, app.childNodes[0]);
+	    
+	    
+	    //   app.insertBefore(div2, element);
+	    
+	 }//if   
+           
+     
+	droppedIn = false;
 }
 function readDropZone(){
 

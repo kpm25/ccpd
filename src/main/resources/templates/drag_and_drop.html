@@ -2,9 +2,31 @@
 <html>
 <head>
 <style>
+/*
+.hidden {
+        display: none;
+   {
+ */ 
+
 .test{
   column-count: 2;
 }
+
+.objects-set{
+ display:inline-block;
+    background-color: #ff0;
+    border: #f00 2px solid;
+    width: 40px; 
+    height: 40px;
+    margin: 10px;
+    padding: 8px;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 2px 2px 2px #999;
+    cursor: default;
+
+}
+
 .objects {
 	/* This is
 		a multi-line
@@ -95,7 +117,9 @@
   
 
 </pre>
+<div id="objects">
 <div id="object1" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 1</div>
+<!-- <div id="object1-tag" class="objects"  >object 1</div>  -->
 <div id="object2" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 2</div>
 <div id="object3" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 3</div>
 <div id="object4" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 4</div>
@@ -104,8 +128,8 @@
 <div id="object5" class="objects2" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 5</div>
 <div id="object6" class="objects2" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 6</div>
 <div id="object7" class="objects2" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 7</div>
-<div id="object8" class="objects2" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 7</div>
-
+<div id="object8" class="objects2" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 8</div>
+</div>
 
 <pre>   
 
