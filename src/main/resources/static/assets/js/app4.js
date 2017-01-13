@@ -41,7 +41,12 @@ function readDropZone(){
           str += _("drop_zone1").children[i].id +" and ";
         }
       else
-         str += _("drop_zone1").children[i].id+" are in drop_zone1.";
+       {
+         if( _("drop_zone1").children.length == 1)
+           str += _("drop_zone1").children[i].id+" is in drop_zone1.";
+         else
+           str += _("drop_zone1").children[i].id+" are in drop_zone1.";
+       }    
       //  
     }
     str = str.toUpperCase();
@@ -61,7 +66,12 @@ function readDropZone2(){
           str += _("drop_zone2").children[i].id +" and ";
         }
       else
-         str += _("drop_zone2").children[i].id+" are in drop_zone2.";
+       {
+         if( _("drop_zone2").children.length == 1)
+           str += _("drop_zone2").children[i].id+" is in drop_zone2.";
+         else
+           str += _("drop_zone2").children[i].id+" are in drop_zone2.";
+        }
       //  
     }
    // alert(str);
