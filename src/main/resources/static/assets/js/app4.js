@@ -94,7 +94,10 @@ function drag_end(event) {
 	    
 	     //     app.insertBefore(div2, app.childNodes[i]);
 	    
-	         app.insertBefore(div2, app.childNodes[0]);
+	        var divs = app.getElementsByTagName('div');
+	    
+	      //   app.insertBefore(div2, app.childNodes[0]);
+              app.insertBefore(div2, app.childNodes[divs.length-1]);
 	    
 	    
 	    //   app.insertBefore(div2, element);
