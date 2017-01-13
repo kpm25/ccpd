@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+.test{
+  column-count: 2;
+}
+.objects {
+	/* This is
+		a multi-line
+		 display:inline-block;
+				comment */
+    display:inline-block;
+    background-color: #00ff00;
+    border: #DFBC6A 1px solid;
+    width: 40px; 
+    height: 40px;
+    margin: 10px;
+    padding: 8px;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 2px 2px 2px #999;
+    cursor: move;
+}
+
+.objects2 {
+    display:inline-block;
+    background-color: #FF0000;
+    border: #DFBC6A 1px solid;
+    width: 40px; 
+    height: 40px;
+    margin: 10px;
+    padding: 8px;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 2px 2px 2px #999;
+    cursor: move;
+}
+#drop_zone1 {
+
+    display:inline-block;
+    background-color: #ddd; 
+    border: #999 1px solid;
+    width: 252px; 
+    height: 180px;
+    padding: 8px;
+    font-size: 18px;
+	
+    margin-right: 50px;
+	margin-left: 50px;
+   
+}
+#drop_zone2 {
+    display:inline-block;
+    background-color: #eee; 
+    border: #999 1px solid;
+    width: 252px; 
+    height: 180px;
+    padding: 8px;
+    font-size: 18px;
+	margin-right: 50px;
+	margin-left: 50px;
+	 margin-bottom: 50px;
+}
+</style>
+ <script type="text/javascript" th:src="@{/assets/js/app4.js}"></script>
+</head>
+<body>
+<div class="test">
+
+<h1><pre>    Drop Zone1	 </pre></h1>
+<div id="drop_zone1" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)" ></div>
+<pre>
+</pre>
+<h1><pre>    Drop Zone2	     </pre></h1>
+<div id="drop_zone2" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)" ></div>
+<pre>
+
+
+
+
+</pre>
+<pre>
+
+
+
+
+</pre>
+<h2 id="app_status">App status...</h2>
+
+
+<pre>
+  
+  
+  
+
+</pre>
+<div id="object1" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 1</div>
+<div id="object2" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 2</div>
+<div id="object3" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 3</div>
+<div id="object4" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 4</div>
+<pre>
+</pre>
+<div id="object5" class="objects2" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 5</div>
+<div id="object6" class="objects2" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 6</div>
+<div id="object7" class="objects2" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 7</div>
+
+
+<pre>   
+
+
+    <button onclick="readDropZone()">Get Results Data Zone1</button>         <button onclick="readDropZone2()">Get Results Data Zone2</button> 
+
+
+</pre>
+
+
+<a th:href="@{/}">home</a>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>

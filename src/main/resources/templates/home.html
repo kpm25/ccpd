@@ -103,7 +103,7 @@
                
                 <tbody>
                 <tr th:each="record : ${records}">
-                    <td th:text="${record.data}">Some text</td>
+                    <td th:utext="${record.data}">Some text</td>
                 </tr>
                 </tbody>
             </table>
@@ -116,7 +116,7 @@
 
 		<a th:href="@{/slideshow}">link test1</a> <br/> 
 		<a th:href="@{/test}">link test2</a>  <br/>
-		<a th:href="@{/chinese}">list2</a>  <br/>
+		<a th:href="@{/drag}">drag_drop_demo</a>  <br/>
 		<a th:href="@{/text}">link test3</a>
 
 

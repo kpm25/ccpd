@@ -33,5 +33,11 @@ public class TaskController {
         return "text";
     }
     
+    @RequestMapping(path = "/drag", method = RequestMethod.GET)
+    public String testTask4() {
+
+        return "drag_and_drop";
+    }
+    
     
 }
