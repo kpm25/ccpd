@@ -8,6 +8,32 @@
    {
  */ 
 
+body {
+	background-color: #E6F1CC;
+	margin:8px 0px 0px 8px;
+	
+}
+div#topdiv {
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	color:#fff;
+	background:#00e;
+	padding:8px;
+	text-align: center;
+}
+div#bottomdiv {
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	color:#fff;
+	background:#00e;
+	padding:8px;
+	text-align: center;
+}
+
 .test{
   column-count: 2;
 }
@@ -61,7 +87,7 @@
 #drop_zone1 {
 
     display:inline-block;
-    background-color: #ddd; 
+    background-color: #fff; 
     border: #999 1px solid;
     width: 440px; 
     height: 180px;
@@ -74,7 +100,7 @@
 }
 #drop_zone2 {
     display:inline-block;
-    background-color: #eee; 
+    background-color: #fff; 
     border: #999 1px solid;
     width: 440px; 
     height: 180px;
@@ -88,6 +114,7 @@
  <script type="text/javascript" th:src="@{/assets/js/app4.js}"></script>
 </head>
 <body>
+<div id="topdiv">Chinese Collocation Profile Database &#160;<button>Menu1</button>&#160;<button>Menu2</button>&#160;<button>Menu3</button>&#160;<button>Menu4</button></div>
 <div class="test">
 
 <h1><pre>    Drop Zone1	 </pre></h1>
@@ -150,6 +177,6 @@
 </div>
 
 
-
+<div id="bottomdiv"><b><font color='white'>© 2017 Chinese Programme, School of Humanities, Massey University. All rights reserved.</font></b></div>
 </body>
 </html>

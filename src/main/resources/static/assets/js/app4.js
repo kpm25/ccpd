@@ -40,32 +40,42 @@ function drag_drop(event) {
      //clone.id = ""; if the divs don't need an ID
     elem_id.parentNode.appendChild(clone);
    */
-     
-     
- 
-     
-  
+   
+
  
 
-  // add the newly created element and its content into the DOM 
- 
-   
-     
-   //  _(elem_id+"-tag").setAttribute('class', 'visible');
-     
-    //    object1-tag.setAttribute('class', 'visible');
+   if( ( event.target.getAttribute('id') =='drop_zone1' ) ||  ( event.target.getAttribute('id') =='drop_zone2' ) )
+   {
     
-    event.target.appendChild( _(elem_id) );
-    _('app_status').innerHTML = "Dropped "+elem_id+" into the "+event.target.getAttribute('id');
-    _(elem_id).removeAttribute("draggable");
-     _(elem_id).style.backgroundColor='blue';
-    _(elem_id).style.cursor = "default";
+		     event.target.appendChild( _(elem_id) );
+		    _('app_status').innerHTML = "Dropped "+elem_id+" into the "+event.target.getAttribute('id');
+		    _(elem_id).removeAttribute("draggable");
+		     
+		      var elem = document.getElementById(elem_id)
+		
+		     
+		    if( elem.parentNode.getAttribute('id') =='drop_zone1')
+		    {
+		       elem.style.backgroundColor = 'blue'
+		    }
+		    else if(elem.parentNode.getAttribute('id')=='drop_zone2')
+		    {
+		       elem.style.backgroundColor = 'skyblue'
+		    }
+		    
+		    
+		      _(elem_id).style.cursor = "default";
+		       droppedIn = true;
+	}	     
+     
+     
+  
     
         
 
     
     
-    droppedIn = true;
+   
     
     
     
@@ -83,7 +93,7 @@ function drag_end(event) {
 	     var app = document.getElementById('objects');
 	     var div2 = document.createElement('div');
 	       div2.setAttribute("class","objects-set");     //display tick:
-	       div2.innerHTML = _(event.target.getAttribute('id')).innerHTML+"<b><font color='red'>&#x2714;</font></b>";
+	       div2.innerHTML = _(event.target.getAttribute('id')).innerHTML+"<b><font color='green'>&#x2714;</font></b>";
 	    //   app.appendChild(div2);
 	   
 	    
