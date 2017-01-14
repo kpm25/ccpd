@@ -17,6 +17,12 @@ body {
 text-align: left;
 }
 
+
+.dropzonelabel{
+text-align: center;
+
+
+}
 div#topdiv {
 	position:fixed;
 	top:0px;
@@ -25,7 +31,7 @@ div#topdiv {
 	color:#fff;
 	background:#00e;
 	padding:8px;
-	border: #999 2px solid;
+	border: #999 3px solid;
 	text-align: center;
 }
 div#bottomdiv {
@@ -36,7 +42,7 @@ div#bottomdiv {
 	color:#fff;
 	background:#00e;
 	padding:8px;
-	border: #999 2px solid;
+	border: #999 3px solid;
 	text-align: center;
 }
 
@@ -128,11 +134,11 @@ Chinese Collocation Profile Database &#160;<button>Menu1</button>&#160;<button>M
 </pre>
 <div class="test">
 
-<h1><pre>    Drop Zone1	 </pre></h1>
+<h1 class="dropzonelabel">Drop Zone1</h1>
 <div id="drop_zone1" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)" ></div>
 <pre>
 </pre>
-<h1><pre>    Drop Zone2	     </pre></h1>
+<h1 class="dropzonelabel">Drop Zone2</h1>
 <div id="drop_zone2" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)" ></div>
 <pre>
 
@@ -142,17 +148,12 @@ Chinese Collocation Profile Database &#160;<button>Menu1</button>&#160;<button>M
 </pre>
 <pre>
 
-
-
-
 </pre>
-<h2 id="app_status">App status...</h2>
+<h2 class="dropzonelabel"   id="app_status">App status...</h2>
 
 
 <pre>
-  
-  
-  
+ 
 
 </pre>
 <div id="objects">
