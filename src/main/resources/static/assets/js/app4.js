@@ -82,10 +82,10 @@ function drag_end(event) {
 	               //add ghost element
 	     var app = document.getElementById('objects');
 	     var div2 = document.createElement('div');
-	       div2.setAttribute("class","objects-set");
-	       div2.innerHTML =  _(event.target.getAttribute('id')).innerHTML;
+	       div2.setAttribute("class","objects-set");     //display tick:
+	       div2.innerHTML = _(event.target.getAttribute('id')).innerHTML+"<b><font color='red'>&#x2714;</font></b>";
 	    //   app.appendChild(div2);
-	     
+	   
 	    
 	     
 	      
@@ -127,6 +127,9 @@ function readDropZone(){
        }    
       //  
     }
+    if(  str === "")
+       var str = "drop_zone1 is empty!";
+    
     str = str.toUpperCase();
     //alert(str);
   _('app_status').style.color = 'purple';
@@ -134,10 +137,13 @@ function readDropZone(){
     /* Run Ajax request to pass any data to your server */
 }
 function readDropZone2(){
-     var str = "";
+        str = "";
+          
     for(var i=0; i < _("drop_zone2").children.length; i++){
-     if(i!= (_("drop_zone2").children.length-1) )
+   
+    if(i!= (_("drop_zone2").children.length-1) )
      {
+        
         if(i!= (_("drop_zone2").children.length-2) )
            str += _("drop_zone2").children[i].id +", ";
         else
@@ -151,8 +157,12 @@ function readDropZone2(){
            str += _("drop_zone2").children[i].id+" are in drop_zone2.";
         }
       //  
-    }
+    }//for
    // alert(str);
+  
+  if(  str === "")
+       var str = "drop_zone2 is empty!";
+    
    str = str.toUpperCase();
   _('app_status').style.color = 'red';
  _('app_status').innerHTML = "<bold>"+str+ "</bold>";
