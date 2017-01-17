@@ -30,7 +30,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/chinese")
 public class ChineseController {
 
     private ChineseRepository repository;
@@ -39,8 +38,8 @@ public class ChineseController {
     public ChineseController(ChineseRepository repository) {
         this.repository = repository;
     }
-
-    @RequestMapping(method = RequestMethod.GET)
+    
+    @RequestMapping(path = "/chinese", method = RequestMethod.GET)
     public String chinese(ModelMap model) {
         List<Chinese> records = repository.findAll();
         model.addAttribute("chineses", records);
